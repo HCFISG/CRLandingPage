@@ -43,9 +43,9 @@
     }
 
     .wifi {
-      max-width: 600px;
+      display: inline-block;
       margin: 40px auto 0;
-      padding: 20px;
+      padding: 20px 30px;
       background: #ffffff;
       border: 1px solid #ccc;
       border-radius: 8px;
@@ -54,14 +54,26 @@
     }
 
     .wifi h2 {
-      margin-top: 0;
+      margin: 0 0 16px 0;
       font-size: 22px;
+      text-align: center;
     }
 
-    .wifi code {
-      display: block;
+    .wifi-grid {
+      display: grid;
+      grid-template-columns: auto auto;
+      column-gap: 20px;
+      row-gap: 10px;
+      align-items: center;
+    }
+
+    .wifi-grid .label {
+      font-weight: bold;
+    }
+
+    .wifi-grid .value {
+      font-family: monospace;
       font-size: 20px;
-      margin-bottom: 10px;
     }
   </style>
 </head>
@@ -75,28 +87,28 @@
       Ho'okahi
     </a>
 
-    <a href="https://m365.cloud.microsoft/apps"
-       target="_blank" rel="noopener noreferrer">
+    https://m365.cloud.microsoft/apps
       Microsoft 365 Apps
     </a>
 
-    <a href="https://zoom.us/join"
-       target="_blank" rel="noopener noreferrer">
+    https://zoom.us/join
       Join Zoom Meeting
     </a>
 
-    <a href="https://signin.webex.com/join"
-       target="_blank" rel="noopener noreferrer">
+    https://signin.webex.com/join
       Join Webex Meeting
     </a>
   </div>
 
   <div class="wifi">
     <h2>Guest Wi‑Fi</h2>
-    <strong>WiFi Name:</strong>
-    <code>Makapuu</code>
-    <strong>WiFi Password:</strong>
-    <code>Vibrant!Hawaii-5</code>
+    <div class="wifi-grid">
+      <div class="label">WiFi Name:</div>
+      <div class="value">Makapuu</div>
+
+      <div class="label">WiFi Password:</div>
+      <div class="value">Vibrant!Hawaii-5</div>
+    </div>
   </div>
 
 </body>
